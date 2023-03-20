@@ -1,0 +1,212 @@
+html{
+    cursor: url("cursor4.png" ), auto;
+}
+
+body{
+    margin:0;
+    margin-bottom:70px;
+    font-family: 'Inter', sans-serif;
+    background: #F9FFB5;
+    min-height: 100%;
+
+}
+
+button{
+    cursor: url("cursor4.png" ), auto;
+
+}
+
+ul{
+    margin:0;
+    padding:0;
+}
+
+.teaser-image {
+    top:0;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border: 15px solid #000;
+    box-sizing: border-box;
+    border-radius: 20px;
+    pointer-events: none;
+
+}
+
+.teaser-image1 {
+    top:0;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border: 15px solid #000;
+    box-sizing: border-box;
+    pointer-events: none;
+
+}
+
+header{
+    background: #F9FFB5 ;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    padding-left:9%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    box-sizing: border-box;
+    position:fixed;
+    width:100%;
+    border: 5px solid #F9FFB5;
+}
+
+
+header .logo { 
+    display: inline-block;
+}
+
+nav{
+    z-index: 2;
+    position:fixed;
+    display:inline-block;
+}
+
+
+nav ul li{
+    
+    display:inline-block;
+}
+
+nav ul li a{
+    color: #000;
+    font-size:24px;
+    letter-spacing:0.37;
+    margin-top:10px;
+    margin-right:0px;
+    text-decoration: none;
+    display:inline-block;
+}
+
+header nav ul li:last-of-type a{
+    margin-right:0px;
+}
+.hero {
+    height: max(55vw,600px);
+    background-color: #F9FFB5;
+    display: flex;
+    justify-content: left;
+    align-items:end;
+}
+.hero_text{
+    flex-direction: column;
+    padding-left: max(60px,8vw);
+    padding-bottom:150px;
+}
+.hero h1 {
+    font-size: max(7vw,80px);
+    font-weight: 700;
+    color: #000;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    font-family: 'Baloo 2', cursive;
+    line-height: max(6.5vw,70px);
+}
+.hero h2 {
+    font-size: max(4.5vw,45px);
+    font-weight: 700;
+    color: #000;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    font-family: 'Baloo 2', cursive;
+    line-height: max(5.2vw,60px);
+}
+.hero p {
+    font-size: max(1.8vw,25px);
+    font-weight: 500;
+    color: #000;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.projects{
+    height: 600px;
+    background-color: #FBFFD0;
+    border: 5px solid #000;
+    border-right:0px;
+    border-left:0px;
+}
+
+.about-me{
+    height:800px;
+    background-color: #F9FFB5;
+
+}
+
+
+.drop-shadow {
+    background-color: #FBFFD0;
+    border-bottom: 5px solid #000;
+    transition: border-bottom 0.5s ease-in-out;
+    box-sizing: border-box;
+    transition: background-color 0.5s ease-in-out;
+    
+}
+
+/* inspired form gumroad website */
+.button {
+    --bg: #000;
+    --hover-bg: #F9FFB5;
+    --hover-text: #000;
+    color: #F9FFB5;
+    border: 4px solid var(--bg);
+    border-radius: 4px;
+    padding: 0.5em 1.5em;
+    background: var(--bg, #000); /* added fallback value */
+    transition: 0.2s;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    display: inline-block;
+    margin-top: 30px;
+    border-radius: 6px;
+
+}
+
+.button:hover {
+  color: var(--hover-text);
+  transform: translate(-0.25rem,-0.25rem);
+  background: var(--hover-bg);
+  box-shadow: 0.25rem 0.25rem var(--bg);
+}
+
+.button:active {
+  transform: translate(0);
+  box-shadow: none;
+}
+
+.menu-button{
+    --bg: transparent;
+    --hover-bg: #000;
+    --hover-text: #F9FFB5;
+    color: #000;
+    border: 4px solid var(--bg);
+    border-radius: 6px;
+    padding:21px 30px;
+    background: var(--bg, #000); /* added fallback value */
+    transition: 0.2s;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    display: inline-block;
+}
+
+.menu-button:hover {
+    color: var(--hover-text);
+    background: var(--hover-bg);
+  }
