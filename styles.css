@@ -1,19 +1,36 @@
+:root {
+    --bg-color: #F9FFB5;
+    --bg-color2: #FBFFD0;
+    --secondarycolor: #000;
+    --text-color: #000000;
+    --border: #000;
+    --header-hover:#000;
+}
+
+.dark-mode {
+    --bg-color: #3d3d3d;
+    --bg-color2: #222222;
+    --secondarycolor:#161616;
+    --text-color: #F9FFB5;
+    --border: #161616;
+    --header-hover:#F9FFB5;
+}
+
 html{
-    cursor: url("cursor4.png" ), auto;
+    cursor: url("blackcursor.png" ), auto;
 }
 
 body{
     margin:0;
     margin-bottom:70px;
     font-family: 'Inter', sans-serif;
-    background: #F9FFB5;
+    background: var(--bg-color);
     min-height: 100%;
-
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, border 0.5s ease-in-out;
 }
 
 button{
     cursor: url("cursor4.png" ), auto;
-
 }
 
 ul{
@@ -24,30 +41,28 @@ ul{
 .teaser-image {
     top:0;
     position: fixed;
-    z-index: 1;
+    z-index: 5;
     width: 100%;
     height: 100%;
-    border: 15px solid #000;
+    border: 15px solid var(--border);
     box-sizing: border-box;
     border-radius: 20px;
     pointer-events: none;
-
 }
 
 .teaser-image1 {
     top:0;
     position: fixed;
-    z-index: 1;
+    z-index: 5;
     width: 100%;
     height: 100%;
-    border: 15px solid #000;
+    border: 15px solid var(--border);
     box-sizing: border-box;
     pointer-events: none;
-
 }
 
 header{
-    background: #F9FFB5 ;
+    background: var(--bg-color);
     height: 90px;
     display: flex;
     align-items: center;
@@ -59,7 +74,10 @@ header{
     box-sizing: border-box;
     position:fixed;
     width:100%;
-    border: 5px solid #F9FFB5;
+    border: 5px solid var(--bg-color);
+    justify-content: space-between;
+    z-index: 4;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, border 0.5s ease-in-out;
 }
 
 
@@ -69,18 +87,17 @@ header .logo {
 
 nav{
     z-index: 2;
-    position:fixed;
+    /* position:fixed; */
     display:inline-block;
 }
 
 
 nav ul li{
-    
     display:inline-block;
 }
 
 nav ul li a{
-    color: #000;
+    color: var(--text-color);
     font-size:24px;
     letter-spacing:0.37;
     margin-top:10px;
@@ -93,65 +110,237 @@ header nav ul li:last-of-type a{
     margin-right:0px;
 }
 .hero {
-    height: max(55vw,600px);
-    background-color: #F9FFB5;
+    height: max(100vh,600px);
+    background-color: var(--bg-color);
     display: flex;
     justify-content: left;
     align-items:end;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
-.hero_text{
+.hero-text{
     flex-direction: column;
     padding-left: max(60px,8vw);
     padding-bottom:150px;
 }
+
+.hero h1::after {
+    content: "|"; /* Use a vertical bar as the caret */
+    color:var(--bg-color);
+    margin-left: 5px; /* Add some space between the text and the caret */
+    font-family: Arial, sans-serif; /* Change the font of the caret */
+    font-size: 130px; /* Change the font size of the caret */
+    transform: translateY(100px);
+    font-weight: 100;
+    position:relative;
+    top: -10px;
+    animation: blink-caret 0.75s linear 5;
+    transition: color 0.5s ease-in-out;
+}
+
+@keyframes blink-caret {
+    from, to { color:var(--bg-color) }
+    50% { color:var(--text-color); }
+  }
+
 .hero h1 {
     font-size: max(7vw,80px);
     font-weight: 700;
-    color: #000;
+    color: var(--text-color);
     text-align: left;
     margin: 0;
     padding: 0;
     font-family: 'Baloo 2', cursive;
     line-height: max(6.5vw,70px);
+    transition: color 0.5s ease-in-out;
 }
 .hero h2 {
     font-size: max(4.5vw,45px);
     font-weight: 700;
-    color: #000;
+    color: var(--text-color);
     text-align: left;
     margin: 0;
     padding: 0;
     font-family: 'Baloo 2', cursive;
     line-height: max(5.2vw,60px);
+    transition: color 0.5s ease-in-out;
 }
 .hero p {
     font-size: max(1.8vw,25px);
     font-weight: 500;
-    color: #000;
+    color: var(--text-color);
     text-align: left;
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
+    transition: color 0.5s ease-in-out;
 }
 
 .projects{
-    height: 600px;
-    background-color: #FBFFD0;
-    border: 5px solid #000;
+    height: 800px;
+    background-color: var(--bg-color2);
+    border: 5px solid var(--text-color);
     border-right:0px;
     border-left:0px;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    color: var(--text-color);
+    transition: background-color 0.5s ease-in-out;
+}
+
+@media (max-width: 800px) {
+    .projects{
+        height:1500px;
+    }
+    .card{
+        width:80%;
+    }
+}
+
+.projects h1{
+    text-align: center;
+    font-size:36px;
+    font-weight:800;
+}
+
+#cardcontainer{
+    height:70%;
+    width:90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+}
+@media (max-width: 800px) {
+    #cardcontainer{
+        flex-direction: column;
+    }
+}
+.card{
+    margin: 20px;
+    border:8px solid var(--text-color);
+    border-radius: 20px;
+    height: min(80%,450px);
+    width: max(20%,300px);
+    background-color: var(--bg-color);
+    z-index: 0;
+    display: flex;
+    color: var(--text-color);
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.card h2{
+    margin-left: 0px;
+    font-size:28px;
+}
+
+.card h3{
+    padding:20px;
+    padding-top:10px;
+}
+
+.card img{
+    width:90%;
+    border-radius: 10px;
+}
+
+.reveal{
+    position:relative;
+    transform:translateY(150px);
+    opacity:0;
+    transition: all 1.0s ease;
+}
+
+.faster-reveal{
+    position:relative;
+    transform:translateY(150px);
+    opacity:0;
+    transition:all 0.8s ease;
+}
+
+.reveal.active{
+    transform: translateY(0px);
+    opacity:1;
+}
+
+.card:hover{
+    transform: translateY(-15px);
+}
+
+.reveal:active{
+    transform: translateY(0);
 }
 
 .about-me{
     height:800px;
-    background-color: #F9FFB5;
-
+    background-color: var(--bg-color);
+    transition: background-color 0.5s ease-in-out;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--text-color);
+    flex-direction: column;
 }
 
+.about-me div{
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#about1{
+    width:50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-me h1{
+    margin-top:100px;
+    font-size: 36px;
+    font-weight: 800;
+}
+.about-me img{
+    width: 100%;
+}
+
+#about-text{
+    display:flex;
+    /* width:40%; */
+    font-family: 'Inter', sans-serif;
+    font-size:24px;
+    font-weight:700;
+    text-align: center;
+    /* background-color: var(--bg-color2); */
+    /* padding:30px; */
+    /* border-radius: 10px; */
+    /* border: solid 10px var(--text-color); */
+}
+
+#contact{
+    font-family: 'Inter', sans-serif;
+    font-size:24px;
+    font-weight:700;
+    background-color: var(--bg-color2);
+    padding:30px;
+    border-radius: 10px;
+    border: solid 10px var(--text-color);
+}
 
 .drop-shadow {
-    background-color: #FBFFD0;
-    border-bottom: 5px solid #000;
+    background-color: var(--bg-color2);
+    border-bottom: 5px solid var(--text-color);
     transition: border-bottom 0.5s ease-in-out;
     box-sizing: border-box;
     transition: background-color 0.5s ease-in-out;
@@ -160,22 +349,24 @@ header nav ul li:last-of-type a{
 
 /* inspired form gumroad website */
 .button {
-    --bg: #000;
-    --hover-bg: #F9FFB5;
-    --hover-text: #000;
-    color: #F9FFB5;
+    --bg: var(
+    --text-color);
+    --hover-bg: var(
+    --bg-color);
+    --hover-text: var(
+    --text-color);
+    color: var(--bg-color);
     border: 4px solid var(--bg);
     border-radius: 4px;
     padding: 0.5em 1.5em;
-    background: var(--bg, #000); /* added fallback value */
-    transition: 0.2s;
+    background: var(--bg, var(--text-color)); /* added fallback value */
+    transition: all 0.2s;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
     font-size: 24px;
     display: inline-block;
     margin-top: 30px;
     border-radius: 6px;
-
 }
 
 .button:hover {
@@ -183,6 +374,7 @@ header nav ul li:last-of-type a{
   transform: translate(-0.25rem,-0.25rem);
   background: var(--hover-bg);
   box-shadow: 0.25rem 0.25rem var(--bg);
+  /* transition: background-color 0.5s ease-in-out; */
 }
 
 .button:active {
@@ -192,13 +384,13 @@ header nav ul li:last-of-type a{
 
 .menu-button{
     --bg: transparent;
-    --hover-bg: #000;
-    --hover-text: #F9FFB5;
-    color: #000;
+    --hover-bg: var(--header-hover);
+    --hover-text: var(--bg-color2);
+    color: var(--text-color);
     border: 4px solid var(--bg);
     border-radius: 6px;
     padding:21px 30px;
-    background: var(--bg, #000); /* added fallback value */
+    background: var(--bg,#000); /* added fallback value */
     transition: 0.2s;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
@@ -209,4 +401,106 @@ header nav ul li:last-of-type a{
 .menu-button:hover {
     color: var(--hover-text);
     background: var(--hover-bg);
+  }
+
+
+/* The switch - the box around the slider */
+.switch {
+    /* Variables */
+   --switch_width: 3.2em;
+   --switch_height: 1.6em;
+   --thumb_color: #FBFFD0;
+   --track_color: #dfe595;
+   --track_active_color: #888;
+   --outline_color: #000;
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: var(--switch_width);
+    height: var(--switch_height);
+    /* margin-left: 93%; */
+    margin-top:20px;
+     margin-right: 50px; 
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+   opacity: 0;
+   width: 0;
+   height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+   box-sizing: border-box;
+   border: 3px solid var(--outline_color);
+   position: absolute;
+   cursor: pointer;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: var(--track_color);
+   transition: .15s;
+   border-radius: var(--switch_height);
+  }
+  
+  .slider:before {
+   box-sizing: border-box;
+   position: absolute;
+   content: "";
+   height: var(--switch_height);
+   width: var(--switch_height);
+   border: 3px solid var(--outline_color);
+   border-radius: 100%;
+   left: -2px;
+   bottom: -2px;
+   background-color: var(--thumb_color);
+   transform: translateY(-0.2em);
+   box-shadow: 0 0.2em 0 var(--outline_color);
+   transition: .15s;
+  }
+  
+  input:checked + .slider {
+   background-color: var(--track_active_color);
+  }
+  
+  input:focus-visible + .slider {
+   box-shadow: 0 0 0 2px var(--track_active_color);
+  }
+  
+  /* Raise thumb when hovered */
+  input:hover + .slider:before {
+   transform: translateY(-0.3em);
+   box-shadow: 0 0.3em 0 var(--outline_color);
+  }
+  
+  input:checked + .slider:before {
+   transform: translateX(calc(var(--switch_width) - var(--switch_height))) translateY(-0.2em);
+  }
+  
+  /* Raise thumb when hovered & checked */
+  input:hover:checked + .slider:before {
+   transform: translateX(calc(var(--switch_width) - var(--switch_height))) translateY(-0.3em);
+   box-shadow: 0 0.3em 0 var(--outline_color);
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px; /* Set the width of the scrollbar */
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--border); /* Set the background color of the scrollbar track */
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: var(--bg-color); /* Set the color of the scrollbar handle */
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--bg-color2); /* Set the color of the scrollbar handle when hovered */
   }

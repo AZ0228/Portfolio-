@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                var header = $("#header");
+                $(window).on("scroll", function() {
+                    var scroll = $(window).scrollTop();
+                    if (scroll > 0) {
+                        header.addClass("drop-shadow");
+                    } else {
+                        header.removeClass("drop-shadow");
+                    }
+                });
+            });
+          </script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>James Liu</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <script src="index.js"></script>
+
+    </head>
+
+    <body>
+        <div class="teaser-image"></div>
+        <div class="teaser-image1"></div>
+
+        <header class="header" id="header">
+            <nav>
+                <ul>
+                    <li><a href="aboutme.html">
+                        <button class="menu-button" >
+                            <b>about</b>
+                        </button>
+                    <li><a onclick="scrollToElement()">
+                        <button class="menu-button" >
+                            <b>projects</b>
+                        </button>
+                    </a></li>
+
+
+                </ul>
+            </nav>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+              </label>
+        </header>
+        
+    </body>
+
+</html>

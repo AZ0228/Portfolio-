@@ -2,21 +2,6 @@
 
 <html lang="en">
     <head>
-        
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script>
-            $(document).ready(function() {
-                var header = $("#header");
-                $(window).on("scroll", function() {
-                    var scroll = $(window).scrollTop();
-                    if (scroll > 0) {
-                        header.addClass("drop-shadow");
-                    } else {
-                        header.removeClass("drop-shadow");
-                    }
-                });
-            });
-          </script>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,6 +13,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
+        <script src="index.js"></script>
+        <link rel="shortcut icon" type="image/png" href="laptop-code.svg"/>
     </head>
 
     <body>
@@ -38,27 +25,32 @@
         <header class="header" id="header">
             <nav>
                 <ul>
-                    <li><a href="#">
-                        <button class="menu-button">
-                            <b>about</b>
-                        </button>
-                    <li><a href="#">
-                        <button class="menu-button">
+                    <li><a onclick="scrollToElement(1)">
+                        <button class="menu-button" >
                             <b>projects</b>
+                        </button>
+                    <li><a onclick="scrollToElement(2)">
+                        <button class="menu-button" >
+                            <b>about</b>
                         </button>
                     </a></li>
 
+
                 </ul>
             </nav>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+              </label>
         </header>
 
 
         <div class="hero">
-            <div class="hero_text">  
-                <h1>hello.</h1>
+            <div class="hero-text">  
+                <h1 id="helloworld"></h1>
                 <h2>I'm James,</h2>
                 <p>a computer science student</p>
-                <a href="#">
+                <a href="aboutme.html">
                     <button class="button">
                         <b>learn more</b>
                     </button>
@@ -66,11 +58,46 @@
             </div>
 
         </div>
-        <div class="projects">
+        <div class="projects" id="projects">
+            <h1 class="reveal faster-reveal">here are my projects:</h1>
+            <div id="cardcontainer">
+            <a href="https://az0228.github.io/sudoku/" class = "card reveal">
+                <h2 class="card-heading">
+                    sudoku
+                </h2>
+                <img src="sudoku2.svg">
+                <h3>
+                    a sudoku website built completely from scratch in HTML, CSS, and Javascript.
+                </h3>
+            </a>
+            <a href="#" id="refresh-link" class="card reveal">
+                <h2 class="card-heading">
+                    this website
+                </h2>
+                <img src="portfoliocard.svg">
+                <h3>
+                    designed in Figma and built from scratch in HTML, CSS and Javascript.
+                </h3>
+            </a>
 
+            </div>
         </div>
-        <div class="about-me">
-
+        <div class="about-me" id="about-me">
+            <h1 class="reveal faster-reveal">
+                about me:
+            </h1>
+            <div id="about-me-container">
+                <section id="about1">
+                    <p id="about-text" class="reveal">
+                        I'm a first year student at Rensselaer Polytechnic Institute studying computer science with experience in web design. I am fluent in:
+                    </p>
+                    <img src="Languages.svg" class="reveal">
+                    <p id="about-text" class="reveal">
+                        I'm looking for either a front end or back end internship position. 
+                    </p>
+                    <p id="contact" class="reveal">Contact me here: liuj43@rpi.edu</p>
+                </section>
+            </div>
         </div>
         
     </body>
