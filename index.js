@@ -55,36 +55,37 @@ function scrollToElement(num) {
     behavior: "smooth"
   });
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-    var header = document.querySelector('#header');
-    window.addEventListener('scroll', function() {
-      var scroll = window.scrollY;
-      if (scroll > 0) {
-        header.classList.add('drop-shadow');
-      } else {
-        header.classList.remove('drop-shadow');
-      }
+if(window.location.href.endsWith("index.html")){
+    document.addEventListener('DOMContentLoaded', function() {
+        var header = document.querySelector('#header');
+        window.addEventListener('scroll', function() {
+          var scroll = window.scrollY;
+          if (scroll > 0) {
+            header.classList.add('drop-shadow');
+          } else {
+            header.classList.remove('drop-shadow');
+          }
+        });
+        const toggleSwitch = document.querySelector('.switch input[type="checkbox"]');
+        const body = document.querySelector('body');
+        toggleSwitch.addEventListener('change', function() {
+          if (this.checked) {
+            body.classList.add('dark-mode');
+          } else {
+            body.classList.remove('dark-mode');
+          }
+        });
+        window.addEventListener('scroll',reveal);
+        animation();
+        setTimeout(() => {
+            helloWorld();
+        }, 1300);
+        document.getElementById("refresh-link").addEventListener("click", function(){
+          location.reload();
+      });
+    
     });
-    const toggleSwitch = document.querySelector('.switch input[type="checkbox"]');
-    const body = document.querySelector('body');
-    toggleSwitch.addEventListener('change', function() {
-      if (this.checked) {
-        body.classList.add('dark-mode');
-      } else {
-        body.classList.remove('dark-mode');
-      }
-    });
-    window.addEventListener('scroll',reveal);
-    animation();
-    setTimeout(() => {
-        helloWorld();
-    }, 1300);
-    document.getElementById("refresh-link").addEventListener("click", function(){
-      location.reload();
-  });
-
-});
+}
 
 
 
