@@ -58,7 +58,7 @@ function scrollToElement(num) {
   });
 }
 
-if(window.location.href.endsWith("Portfolio/")){
+if(true){
     document.addEventListener('DOMContentLoaded', function() {
         var header = document.querySelector('#header');
         window.addEventListener('scroll', function() {
