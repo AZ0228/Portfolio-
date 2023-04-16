@@ -187,6 +187,7 @@ header nav ul li:last-of-type a{
     flex-direction: column;
     align-content: center;
     flex-wrap: wrap;
+    width: 100%;
     color: var(--text-color);
     transition: background-color 0.5s ease-in-out;
 }
@@ -538,4 +539,23 @@ header nav ul li:last-of-type a{
     width:70%;
     font-size:18px;
     font-weight:500;
+}
+
+.hero img {
+    height: 900px;
+    padding-left: 0px;
+}
+
+.hero img.transform {
+    transform: translateY(100px);
+}
+
+.reveal1{
+    position:relative;
+    transform:translateY(150px);
+    transition: all 2.0s ease;
+}
+
+.reveal1.active{
+    transform: translateY(0);
 }

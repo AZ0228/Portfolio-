@@ -1,3 +1,4 @@
+
 function reveal(){
     var reveals = all('.reveal');
     for(let i=0;i<reveals.length;i++){
@@ -34,7 +35,8 @@ function typewriter(el, text, i){
 }
 
 function animation(){
-
+    const laptop = id("laptop");
+    laptop.classList.add('active');
 }
 
 function scrollToElement(num) {
@@ -55,6 +57,7 @@ function scrollToElement(num) {
     behavior: "smooth"
   });
 }
+
 if(window.location.href.endsWith("index.html")){
     document.addEventListener('DOMContentLoaded', function() {
         var header = document.querySelector('#header');
@@ -82,9 +85,10 @@ if(window.location.href.endsWith("index.html")){
         }, 1300);
         document.getElementById("refresh-link").addEventListener("click", function(){
           location.reload();
-      });
+        });
+        animation();
+    });   
     
-    });
 }
 
 
@@ -96,3 +100,4 @@ function all(name){
 function id(name){
     return document.getElementById(name);
 }
+
