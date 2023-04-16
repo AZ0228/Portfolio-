@@ -552,7 +552,7 @@ header nav ul li:last-of-type a{
 
 .reveal1{
     position:relative;
-    transform:translateY(150px);
+    transform:translateY(300px);
     transition: all 2.0s ease;
 }
 
