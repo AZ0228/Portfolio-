@@ -190,6 +190,8 @@ header nav ul li:last-of-type a{
     width: 100%;
     color: var(--text-color);
     transition: background-color 0.5s ease-in-out;
+    position: relative;
+    z-index: 2;
 }
 
 @media (max-width: 800px) {
@@ -543,7 +545,8 @@ header nav ul li:last-of-type a{
 
 .hero img {
     height: 900px;
-    padding-left: 0px;
+    padding-left: 30px;
+    z-index: 0;
 }
 
 .hero img.transform {
@@ -557,5 +560,5 @@ header nav ul li:last-of-type a{
 }
 
 .reveal1.active{
-    transform: translateY(0);
+    transform: translateY(50px);
 }
