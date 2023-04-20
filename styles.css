@@ -66,7 +66,7 @@ header{
     height: 90px;
     display: flex;
     align-items: center;
-    padding-left:9%;
+    padding-left: 3%;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     font-size: 20px;
@@ -86,6 +86,13 @@ header .logo {
     display: inline-block;
 }
 
+#nav-container{
+    display:flex;
+    align-items: center;
+    width: 385px;
+    justify-content: space-between;
+}
+
 nav{
     z-index: 2;
     /* position:fixed; */
@@ -95,6 +102,13 @@ nav{
 
 nav ul li{
     display:inline-block;
+    /* display: flex; */
+    /* flex-wrap: nowrap; */
+    /* flex-direction: row; */
+    /* align-content: center; */
+    /* justify-content: center; */
+    height: 90px;
+    align-content: center;
 }
 
 nav ul li a{
@@ -105,6 +119,7 @@ nav ul li a{
     margin-right:0px;
     text-decoration: none;
     display:inline-block;
+    vertical-align: middle;
 }
 
 header nav ul li:last-of-type a{
@@ -388,8 +403,10 @@ header nav ul li:last-of-type a{
 
 .menu-button{
     --bg: transparent;
-    --hover-bg: var(--header-hover);
-    --hover-text: var(--bg-color2);
+    --hover-bg: var(
+    --header-hover);
+    --hover-text: var(
+    --bg-color2);
     color: var(--text-color);
     border: 4px solid var(--bg);
     border-radius: 6px;
@@ -535,6 +552,8 @@ header nav ul li:last-of-type a{
     flex-direction: column;
     align-content: center;
     flex-wrap: wrap;
+    color: var(--text-color);
+    transition: all 0.5s;
 }
 
 .intro p{
@@ -544,8 +563,8 @@ header nav ul li:last-of-type a{
 }
 
 .hero img {
-    height: 900px;
-    padding-left: 30px;
+    height: 85vh;
+    padding-left:0px;
     z-index: 0;
 }
 
@@ -561,4 +580,12 @@ header nav ul li:last-of-type a{
 
 .reveal1.active{
     transform: translateY(50px);
+}
+
+#home{
+    height: 40px;
+    display:inline-block;
+    margin-top: 15px;
+    align-self: center;
+    /* padding-top: 10px; */
 }

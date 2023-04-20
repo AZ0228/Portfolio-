@@ -4,19 +4,7 @@
     <head>
         
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script>
-            $(document).ready(function() {
-                var header = $("#header");
-                $(window).on("scroll", function() {
-                    var scroll = $(window).scrollTop();
-                    if (scroll > 0) {
-                        header.addClass("drop-shadow");
-                    } else {
-                        header.removeClass("drop-shadow");
-                    }
-                });
-            });
-          </script>
+
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,27 +30,32 @@
         <div class="teaser-image1"></div>
 
         <header class="header" id="header">
-            <nav>
-                <ul>
-                    <li><a href="index.html">
-                        <button class="menu-button" >
-                            <b>projects1</b>
-                        </button>
-                    <li><a href="index.html">
-                        <button class="menu-button" >
-                            <b>about</b>
-                        </button>
-                    </a></li>
+            <div id="nav-container">
+                <a href="index.html">
+                    <img src="laptop-code.svg"id="home">
 
-
-                </ul>
-            </nav>
+                </a>
+                <nav>
+                    <ul>
+                        <li><a onclick="scrollToElement(1)">
+                            <button class="menu-button" >
+                                <b>projects</b>
+                            </button>
+                        <li><a onclick="scrollToElement(2)">
+                            <button class="menu-button" >
+                                <b>about</b>
+                            </button>
+                        </a></li>
+    
+    
+                    </ul>
+                </nav>
+            </div>
             <label class="switch">
                 <input type="checkbox">
                 <span class="slider"></span>
               </label>
-        </header>
-        <div class="intro">
+        </header>        <div class="intro">
             <p>
                 <h1>Mini-BLAST algorithm for fast genome look-up</h1>
                 <p>

@@ -58,7 +58,6 @@ function scrollToElement(num) {
   });
 }
 
-if(window.location.href.endsWith("Portfolio/")){
     document.addEventListener('DOMContentLoaded', function() {
         var header = document.querySelector('#header');
         window.addEventListener('scroll', function() {
@@ -78,18 +77,19 @@ if(window.location.href.endsWith("Portfolio/")){
             body.classList.remove('dark-mode');
           }
         });
-        window.addEventListener('scroll',reveal);
-        animation();
-        setTimeout(() => {
-            helloWorld();
-        }, 1300);
-        document.getElementById("refresh-link").addEventListener("click", function(){
-          location.reload();
-        });
-        animation();
+        if(window.location.href.endsWith("Portfolio/")){  
+            window.addEventListener('scroll',reveal);
+            animation();
+            setTimeout(() => {
+                helloWorld();
+            }, 1300);
+            document.getElementById("refresh-link").addEventListener("click", function(){
+            location.reload();
+            });
+            animation();
+        }
     });   
     
-}
 
 
 
