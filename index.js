@@ -78,16 +78,17 @@ function scrollToElement(num) {
             body.classList.remove('dark-mode');
           }
         });
-        if(window.location.href.endsWith("Portfolio/")){  
+        if(window.location.href.endsWith("Portfolio/")||window.location.href.endsWith("index.html")){  
             window.addEventListener('scroll',reveal);
-            animation();
             setTimeout(() => {
                 helloWorld();
             }, 1300);
             document.getElementById("refresh-link").addEventListener("click", function(){
             location.reload();
             });
-            animation();
+            setTimeout(() => {
+                animation();
+            }, 300);
         }
     });   
     

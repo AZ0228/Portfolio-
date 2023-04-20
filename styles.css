@@ -581,11 +581,13 @@ header nav ul li:last-of-type a{
 
 .reveal1{
     position:relative;
+    opacity:0.5;
     transform:translateY(300px);
     transition: all 2.0s ease;
 }
 
 .reveal1.active{
+    opacity:1;
     transform: translateY(50px);
 }
 
