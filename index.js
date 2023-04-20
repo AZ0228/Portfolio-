@@ -78,7 +78,7 @@ function scrollToElement(num) {
             body.classList.remove('dark-mode');
           }
         });
-        if(window.location.href.endsWith("index.html")){  
+        if(window.location.href.endsWith("Portfolio/")){  
             window.addEventListener('scroll',reveal);
             animation();
             setTimeout(() => {
