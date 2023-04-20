@@ -132,11 +132,15 @@ header nav ul li:last-of-type a{
     justify-content: left;
     align-items:end;
     transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+    overflow: hidden;
 }
 .hero-text{
     flex-direction: column;
     padding-left: max(60px,8vw);
     padding-bottom:150px;
+    position: absolute;
+    pointer-events: all;
+    z-index: 3;
 }
 
 .hero h1::after {
@@ -159,7 +163,7 @@ header nav ul li:last-of-type a{
   }
 
 .hero h1 {
-    font-size: max(7vw,80px);
+    font-size: max(6vw,80px);
     font-weight: 700;
     color: var(--text-color);
     text-align: left;
@@ -563,9 +567,12 @@ header nav ul li:last-of-type a{
 }
 
 .hero img {
-    height: 85vh;
-    padding-left:0px;
+    height: min(94vh,55vw);
+    padding-left: 30vw;
     z-index: 0;
+    float: right;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero img.transform {

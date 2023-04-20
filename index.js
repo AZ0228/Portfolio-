@@ -37,6 +37,7 @@ function typewriter(el, text, i){
 function animation(){
     const laptop = id("laptop");
     laptop.classList.add('active');
+
 }
 
 function scrollToElement(num) {
@@ -77,7 +78,7 @@ function scrollToElement(num) {
             body.classList.remove('dark-mode');
           }
         });
-        if(window.location.href.endsWith("Portfolio/")){  
+        if(window.location.href.endsWith("index.html")){  
             window.addEventListener('scroll',reveal);
             animation();
             setTimeout(() => {
