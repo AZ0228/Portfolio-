@@ -194,7 +194,24 @@ header nav ul li:last-of-type a{
     font-family: 'Inter', sans-serif;
     transition: color 0.5s ease-in-out;
 }
+.hero img {
+    height: min(90vh,55vw);
+    padding-left: 30vw;
+    z-index: 0;
+    float: right;
+    position: relative;
+    overflow: hidden;
+}
 
+@media(max-width:1200px){
+    .hero img{
+        display:none;
+    }
+
+}
+.hero img.transform {
+    transform: translateY(100px);
+}
 .projects{
     height: 800px;
     background-color: var(--bg-color2);
@@ -213,9 +230,9 @@ header nav ul li:last-of-type a{
     z-index: 2;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
     .projects{
-        height:1500px;
+        height:auto;
     }
     .card{
         width:80%;
@@ -237,9 +254,10 @@ header nav ul li:last-of-type a{
     align-content: center;
     flex-direction: row;
 }
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
     #cardcontainer{
         flex-direction: column;
+        height:auto;
     }
 }
 .card{
@@ -301,7 +319,7 @@ header nav ul li:last-of-type a{
 }
 
 .about-me{
-    height:800px;
+    height: auto;
     background-color: var(--bg-color);
     transition: background-color 0.5s ease-in-out;
     display:flex;
@@ -566,18 +584,7 @@ header nav ul li:last-of-type a{
     font-weight:500;
 }
 
-.hero img {
-    height: min(90vh,55vw);
-    padding-left: 30vw;
-    z-index: 0;
-    float: right;
-    position: relative;
-    overflow: hidden;
-}
 
-.hero img.transform {
-    transform: translateY(100px);
-}
 
 .reveal1{
     position:relative;
@@ -605,5 +612,11 @@ header nav ul li:last-of-type a{
     /* justify-content: end; */
     height:95%;
     width:70%;
-    /* bottom:0; */
+    /* bottom: 0; */
+}
+
+@media (max-width: 1300px) {
+    #laptop1{
+        width:90%;
+    }
 }
