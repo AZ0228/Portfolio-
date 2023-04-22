@@ -20,6 +20,21 @@ function helloWorld(){
     typewriter(hello,text,0);
 }
 
+function toggleSwitch(){
+    const toggleSwitch = document.querySelector('.switch input[type="checkbox"]');
+    const body = document.querySelector('body');
+    const laptop = id("home");
+    toggleSwitch.addEventListener('change', function() {
+      if (this.checked) {
+        body.classList.add('dark-mode');
+        laptop.src= "laptop-code1.svg";
+      } else {
+        body.classList.remove('dark-mode');
+        laptop.src= "laptop-code.svg";
+      }
+    });
+}
+
 function typewriter(el, text, i){
     const min = 25;
     const max = 150;
@@ -47,7 +62,7 @@ function scrollToElement(num) {
   } else {
     element = document.getElementById("about-me");
   }
-  var offset = 130;
+  var offset = 85;
   var bodyRect = document.body.getBoundingClientRect().top;
   var elementRect = element.getBoundingClientRect().top;
   var elementPosition = elementRect - bodyRect;
@@ -69,15 +84,7 @@ function scrollToElement(num) {
             header.classList.remove('drop-shadow');
           }
         });
-        const toggleSwitch = document.querySelector('.switch input[type="checkbox"]');
-        const body = document.querySelector('body');
-        toggleSwitch.addEventListener('change', function() {
-          if (this.checked) {
-            body.classList.add('dark-mode');
-          } else {
-            body.classList.remove('dark-mode');
-          }
-        });
+        toggleSwitch();
         if(window.location.href.endsWith("Portfolio/")||window.location.href.endsWith("index.html")){  
             window.addEventListener('scroll',reveal);
             setTimeout(() => {
