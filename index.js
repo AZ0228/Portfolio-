@@ -13,6 +13,20 @@ function reveal(){
         }
     }
 }
+function reveal1(){
+    var reveals = all('.a');
+    for(let i=0;i<reveals.length;i++){
+        var windowheight= window.innerHeight;
+        var revealtop = reveals[i].getBoundingClientRect().top;
+        var revealpoint = 50;
+
+        if(revealtop < windowheight - revealpoint){
+            setTimeout(() => {
+                reveals[i].classList.add('active');
+            }, i*200);
+        }
+    }
+}
 
 function helloWorld(){
     const hello = id("helloworld");
@@ -87,6 +101,7 @@ function scrollToElement(num) {
         toggleSwitch();
         if(window.location.href.endsWith("Portfolio/")||window.location.href.endsWith("index.html")){  
             window.addEventListener('scroll',reveal);
+            window.addEventListener('scroll',reveal1);
             setTimeout(() => {
                 helloWorld();
             }, 1300);
