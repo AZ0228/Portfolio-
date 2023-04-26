@@ -319,7 +319,7 @@ header nav ul li:last-of-type a{
 }
 
 .about-me{
-    height: auto;
+    height:800px;
     background-color: var(--bg-color);
     transition: background-color 0.5s ease-in-out;
     display:flex;
@@ -612,7 +612,7 @@ header nav ul li:last-of-type a{
     /* justify-content: end; */
     height:95%;
     width:70%;
-    /* bottom: 0; */
+    /* bottom:0; */
 }
 
 @media (max-width: 1300px) {
@@ -620,3 +620,4 @@ header nav ul li:last-of-type a{
         width:90%;
     }
 }
+
