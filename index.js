@@ -88,18 +88,23 @@ function scrollToElement(num) {
   });
 }
 
-    document.addEventListener('DOMContentLoaded', function() {
-        var header = document.querySelector('#header');
-        window.addEventListener('scroll', function() {
-          var scroll = window.scrollY;
-          if (scroll > 0) {
-            header.classList.add('drop-shadow');
-          } else {
-            header.classList.remove('drop-shadow');
-          }
-        });
-        toggleSwitch();
-        if(window.location.href.endsWith("Portfolio/")||window.location.href.endsWith("index.html")){  
+document.addEventListener('DOMContentLoaded', function() {
+    var header = document.querySelector('#header');
+    window.addEventListener('scroll', function() {
+      var scroll = window.scrollY;
+      if (scroll > 0) {
+        header.classList.add('drop-shadow');
+      } else {
+        header.classList.remove('drop-shadow');
+      }
+    });
+    toggleSwitch();
+    if(window.location.href.endsWith("Portfolio/")||window.location.href.endsWith("index.html")){  
+        setTimeout(() => {
+            var loader = id("loader-screen");
+            loader.classList.add('opacity');
+        }, 2500);
+        setTimeout(() => {
             window.addEventListener('scroll',reveal);
             window.addEventListener('scroll',reveal1);
             setTimeout(() => {
@@ -110,10 +115,11 @@ function scrollToElement(num) {
             });
             setTimeout(() => {
                 animation();
-            }, 300);
-        }
-    });   
-    
+            }, 0);
+        }, 2000);
+    }
+});   
+
 
 
 

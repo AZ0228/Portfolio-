@@ -41,7 +41,7 @@ ul{
 .teaser-image {
     top:0;
     position: fixed;
-    z-index: 5;
+    z-index: 6;
     width: 100%;
     height: 100%;
     border: 15px solid var(--border);
@@ -53,7 +53,7 @@ ul{
 .teaser-image1 {
     top:0;
     position: fixed;
-    z-index: 5;
+    z-index: 6;
     width: 100%;
     height: 100%;
     border: 15px solid var(--border);
@@ -590,7 +590,7 @@ header nav ul li:last-of-type a{
     position:relative;
     opacity:0.5;
     transform:translateY(300px);
-    transition: all 2.0s ease;
+    transition: all 3.0s ease;
 }
 
 .reveal1.active{
@@ -619,5 +619,23 @@ header nav ul li:last-of-type a{
     #laptop1{
         width:90%;
     }
+}
+
+#loader-screen{
+    background-color:#F9FFB5;
+    position:fixed;
+    top:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 5;
+    transition: all 1s;
+}
+
+.opacity{
+    opacity:0;
 }
 
