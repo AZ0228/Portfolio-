@@ -63,6 +63,7 @@ ul{
 
 header{
     background: transparent;
+    z-index:1;
     height: 90px;
     display: flex;
     align-items: center;
