@@ -64,7 +64,7 @@ function typewriter(el, text, i){
 }
 
 function animation(){
-    const laptop = id("laptop");
+    const laptop = id("threed");
     laptop.classList.add('active');
 
 }

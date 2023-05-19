@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="animations.css">
         <script src="index.js"></script>
         <link rel="shortcut icon" type="image/png" href="laptop-code.svg"/>
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.336/build/spline-viewer.js"></script>
 
     </head>
 
@@ -29,7 +30,7 @@
         <header class="header" id="header">
             <div id="nav-container">
                     <!--<img src="laptop-code.svg"id="home">-->
-                    <a class="loader1" href="https://az0228.github.io/Portfolio/"></a>
+                <a class="loader1" href="index.html"></a>
                 <nav>
                     <ul>
                         <li><a onclick="scrollToElement(1)">
@@ -54,6 +55,7 @@
 
 
         <div class="hero">
+            <img src="hero-mobile.png" id="hero-mobile">
             <div class="hero-text">  
                 <h1 id="helloworld"></h1>
                 <h2>I'm James,</h2>
@@ -64,7 +66,13 @@
                     </button>
                 </a>
             </div>
-            <img src="laptop2.png" id="laptop" class="reveal1">
+            <!--<img src="laptop2.png" id="laptop" class="reveal1">-->
+            <!--<div id="laptop">-->
+                <div id="space"></div>
+                <spline-viewer id="threed" loading-anim url="https://prod.spline.design/iawTGCa95-PGWWCg/scene.splinecode"></spline-viewer>
+            
+        </div>
+
         </div>
         <div class="projects" id="projects">
             <h1 class="reveal faster-reveal">here are my projects:</h1>
@@ -99,7 +107,6 @@
             </div>
         </div>
         <div class="about-me" id="about-me">
-            <img src="laptop3.png" id="laptop1" class="reveal a">
             <h1 class="reveal faster-reveal a">
                 about me:
             </h1>
@@ -121,3 +128,4 @@
     </body>
 
 </html>
+

@@ -62,7 +62,7 @@ ul{
 }
 
 header{
-    background: var(--bg-color);
+    background: transparent;
     height: 90px;
     display: flex;
     align-items: center;
@@ -74,7 +74,7 @@ header{
     box-sizing: border-box;
     position:fixed;
     width:100%;
-    border: 5px solid var(--bg-color);
+    border: 5px solid transparent;
     justify-content: space-between;
     z-index: 4;
     top: 0;
@@ -133,6 +133,7 @@ header nav ul li:last-of-type a{
     align-items:end;
     transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
     overflow: hidden;
+    flex-direction: row;
 }
 .hero-text{
     flex-direction: column;
@@ -194,17 +195,18 @@ header nav ul li:last-of-type a{
     font-family: 'Inter', sans-serif;
     transition: color 0.5s ease-in-out;
 }
-.hero img {
-    height: min(90vh,55vw);
-    padding-left: 30vw;
+.hero #laptop {
+    /* height: min(50vh,35vw); */
+    padding-left: 30vh;
     z-index: 0;
-    float: right;
+    /* float: right; */
     position: relative;
     overflow: hidden;
+    margin-left:-30px;
 }
 
 @media(max-width:1200px){
-    .hero img{
+    .hero #laptop{
         display:none;
     }
 
@@ -228,6 +230,7 @@ header nav ul li:last-of-type a{
     transition: background-color 0.5s ease-in-out;
     position: relative;
     z-index: 2;
+    align-items: center;
 }
 
 @media (max-width: 1200px) {
@@ -243,6 +246,8 @@ header nav ul li:last-of-type a{
     text-align: center;
     font-size:36px;
     font-weight:800;
+    word-wrap: normal;
+    width: min(80%,800px);
 }
 
 #cardcontainer{
@@ -340,9 +345,9 @@ header nav ul li:last-of-type a{
 }
 
 #about1{
-    width:50%;
+    width: max(300px,50%);
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
 }
@@ -639,3 +644,55 @@ header nav ul li:last-of-type a{
     opacity:0;
 }
 
+#threed{
+    margin-right:-150px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    scale: 1.0;
+}
+
+#space{
+    padding-right: 15vw;
+}
+
+#hero-mobile{
+    display: none;
+    width:100%;
+    margin-top:100px;
+}
+
+
+@media(max-width:500px){
+    #nav-container nav{
+        display:none;
+    }
+}
+
+@media (max-width:940px) {
+    #threed{
+        display:none;
+    }
+    .hero-text{
+        display:none;
+    }
+    #hero-mobile{
+        display:block;
+    }
+    .hero{
+        height:auto;
+    }
+}
+@media (max-height:750px){
+    #threed{
+        height:120%;
+        scale:1.2;
+        width:120%;
+    }
+
+}
+@media (min-width:1650px){
+    #space{
+        padding-right:30vw;
+    }
+}

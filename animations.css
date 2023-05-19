@@ -183,3 +183,9 @@
     transform: translate(0 , 0px)
   }
 }
+
+@media (max-width:500px){
+    .loader1{
+        margin-left: 20px;
+    }
+}
