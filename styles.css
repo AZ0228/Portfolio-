@@ -139,8 +139,8 @@ header nav ul li:last-of-type a{
 .hero-text{
     flex-direction: column;
     padding-left: max(60px,8vw);
-    padding-bottom:150px;
-    position: absolute;
+    padding-bottom: 150px;
+    /* position: absolute; */
     pointer-events: all;
     z-index: 3;
 }
@@ -678,7 +678,9 @@ header nav ul li:last-of-type a{
 #hero-mobile{
     display: none;
     width:100%;
-    margin-top:100px;
+    margin-top: 80px;
+    position: relative;
+    scale: 1.1;
 }
 
 
@@ -692,14 +694,19 @@ header nav ul li:last-of-type a{
     #threed{
         display:none;
     }
-    .hero-text{
+    .hero-text h1{
         display:none;
     }
     #hero-mobile{
         display:block;
     }
     .hero{
-        height:auto;
+        display:flex;
+        align-content: center;
+        flex-direction: column;
+    }
+    .hero-text{
+        /* padding-bottom:30px; */
     }
 }
 @media (max-height:750px){
