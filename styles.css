@@ -692,6 +692,10 @@ header nav ul li:last-of-type a{
     #nav-container nav{
         display:none;
     }
+    #hero-mobile{
+        display:block;
+        margin-top:50px;
+    }
 }
 
 @media (max-width:940px) {
