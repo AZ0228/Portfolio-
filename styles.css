@@ -696,6 +696,7 @@ header nav ul li:last-of-type a{
     }
     .hero-text h1{
         display:none;
+
     }
     #hero-mobile{
         display:block;
@@ -706,6 +707,9 @@ header nav ul li:last-of-type a{
         flex-direction: column;
     }
     .hero-text{
+        position: relative;
+        width:90%;
+        margin-top:50px;
         /* padding-bottom:30px; */
     }
 }
