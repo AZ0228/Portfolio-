@@ -143,6 +143,7 @@ header nav ul li:last-of-type a{
     position: absolute;
     pointer-events: all;
     z-index: 3;
+    /* width: 90%; */
 }
 
 .hero h1::after {
@@ -712,8 +713,8 @@ header nav ul li:last-of-type a{
     }
     .hero-text{
         position: relative;
-        width:90%;
-        margin-top:50px;
+        /* width:90%; */
+        margin-top: 30px;
         /* padding-bottom:30px; */
     }
 }
